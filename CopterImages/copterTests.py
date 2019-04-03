@@ -12,6 +12,8 @@ import cv2
 import numpy
 
 
+
+
 def crop(savePath, image, x, y, width, height):
 	imgwidth, imgheight = image.size
 	box = (x, y, x+width, y+height)
@@ -78,8 +80,28 @@ cvImages = []
 for im in images :
 	cvImages.append(cv2.cvtColor(numpy.array(im), cv2.COLOR_BGR2RGB))
 
-showImage = cv2.resize(cvImages[0], (700, 700))
+imageWithText = cv2.resize(cvImages[0], (700, 700))
 cv2.namedWindow("Display Window", cv2.WINDOW_NORMAL)
-cv2.imshow( "Display Window", showImage)
+cv2.imshow( "Display Window", imageWithText)
 cv2.waitKey(0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
